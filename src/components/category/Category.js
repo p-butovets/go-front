@@ -1,20 +1,29 @@
 import Product from "../product/Product"
+import glovoExportMenu from "../../data/glovo_export_menu.json";
 
 const Category = (props) => {
 
-    const { categoryName, products } = props;
+    const { categoryName, sections } = props;
 
-    const productsList = products.map(product => {
-        const { uniq_id, name, description, image_url_png, price, isNew, attributes_groups } = product;
+    /*функция получает продукт по айди*/
+    const getProductById = id => {
+        for (let i of glovoExportMenu.data.products) {
+            if (i.id === id) {
+                return i
+            }
+        }
+    }
+
+    const productsList = sections[0].products.map(item => {
+        const { id, name, price, description, image_url, attributes_groups } = getProductById(item)
         return (
             <Product
-                key={uniq_id}
-                id={uniq_id}
+                key={id}
+                id={id}
                 name={name}
                 description={description}
-                img={image_url_png}
+                img={image_url}
                 price={price}
-                isNew={isNew}
                 attributes_groups={attributes_groups}
             />
         )

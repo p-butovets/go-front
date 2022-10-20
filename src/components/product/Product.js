@@ -1,10 +1,6 @@
 const Product = (props) => {
 
-    const { name, id, img } = props;
-    const price = `${props.price} ₴`;
-    const description = props.description
-        ? props.description.slice(0, 90)
-        : `Це ${props.name.toLowerCase()}, нічого більше ми про це не знаємо`
+    const { name, id, img, price, description, attributes_groups } = props;
 
     return (
         <div data-test-id="list-element" type="PRODUCT_ROW" className="product-row">

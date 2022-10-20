@@ -1,15 +1,15 @@
 import Category from "../category/Category";
 import '../../style/index.scss';
 
-import menu from "../../data/menu.json";
+import glovoExportMenu from "../../data/glovo_export_menu.json";
 
 const Menu = () => {
 
-    const content = menu.data.sections.map(item => {
+    const content = glovoExportMenu.data.collections.map(item => {
         return (
             <Category
                 categoryName={item.name}
-                products={item.products}
+                sections={item.sections}
                 key={item.uniq_id}
             />
         )
