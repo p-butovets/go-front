@@ -1,0 +1,36 @@
+@import "../pages/glovo.scss";
+@import-normalize;
+
+body {
+	font-family: Gotham, Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+section,
+header,
+footer {
+	padding: 0 15px;
+}
+
+@media (min-width: 575.98px) {
+	section,
+	header,
+	footer {
+		padding: 0 calc(50vw - 270px);
+	}
+}
+
+@media (min-width: 767.98px) {
+	section,
+	header,
+	footer {
+		padding: 0 calc(50vw - 360px);
+	}
+}
+
+@media (min-width: 991.98px) {
+	section,
+	header,
+	footer {
+		padding: 0 calc(50vw - 540px);
+	}
+}
