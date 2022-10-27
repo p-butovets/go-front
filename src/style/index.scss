@@ -1,5 +1,15 @@
-@import "../pages/glovo.scss";
+@import "./base/variables";
+@import "./base/animation";
+@import "./base/mixins";
+
+@import "./blocks/modal";
+@import "./blocks/modifierGroup";
+@import "./blocks/badge";
+
 @import-normalize;
+
+/*все что ниже можно не компилировать */
+@import "./blocks/glovo"; /*этот импорт - только чтобы повторить превью из админки*/
 
 body {
 	font-family: Gotham, Arial, Helvetica Neue, Helvetica, sans-serif;

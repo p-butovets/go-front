@@ -1,0 +1,23 @@
+@mixin centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin center-top {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+@mixin overflow-y {
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+		width: 3px;
+		background-color: #f5f5f5;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $disabled-color;
+		border-radius: 5px;
+	}
+}

@@ -1,0 +1,42 @@
+.attribute {
+	margin-top: 17px;
+	margin-bottom: 17px;
+	border: 1px solid $disabled-color;
+	padding: 8px 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 8px;
+	&-title {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		min-height: 38px;
+		font-size: 16px;
+		font-weight: 300;
+		color: $secondary-color;
+	}
+	&-name {
+		cursor: pointer;
+		padding-right: 10px;
+	}
+	&-price {
+		color: $primary-color;
+	}
+	&-group {
+		margin-bottom: 32px;
+		width: 100%;
+		&_title {
+			font-size: 20px;
+			line-height: 1.4;
+			font-weight: 700;
+			margin: 0;
+		}
+		&_options {
+			color: $secondary-color;
+			font-size: 14px;
+			line-height: 1.6;
+			font-weight: 300;
+		}
+	}
+}
